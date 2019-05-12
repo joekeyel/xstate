@@ -326,7 +326,7 @@ const loggedIn = {
             after:{
             
               
-              REFRESH_TOKEN_TIME_TESTING :'#idaas.loggedIn.refreshingToken'
+              REFRESH_TOKEN_TIME:'#idaas.loggedIn.refreshingToken'
               
             }
 
