@@ -127,12 +127,16 @@ const fetchMachine = Machine({
 
         GeneratingReport : {
          on : {
-           '' : {target:'ShowingReport'}
+           '' : {
+                  target:'ShowingReport'
+                }
          }
         },
         ShowingReport : {
           on : {
-            '' : {target : 'finish'}
+            '' : {
+                  target : 'finish'
+                 }
           }
         } 
         ,
