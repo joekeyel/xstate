@@ -145,28 +145,6 @@ const fetchMachine = Machine({
           type: 'final'
         }
       }
-    },
-    rejected: {
-      initial: 'can retry',
-      states: {
-        'can retry': {
-          on: {
-            '': {
-              target: 'failure',
-              cond: 'maxAttempts'
-            }
-          }
-        },
-        failure: {
-          on: {
-            RETRY: undefined,
-          },
-          type: 'final'
-        }
-      },
-      on: {
-        RETRY: 'outStandingPayment'
-      }
     }
   }
 }, {
