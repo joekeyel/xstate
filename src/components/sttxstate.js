@@ -55,13 +55,26 @@ states: {
               
          },
           SLOW: {
-              target:'#stt.speedTest' , actions:'logchoice'
+              target:'speedTest' , actions:'logchoice'
               
          },
           WIFI_PROBLEM: {
               target:'isWifi' , actions:'logchoice'
               
          }
+        }
+      },
+      speedTest: {
+        on: {
+          GOOD: {
+            target:'end' , actions:'logchoice'
+            
+       },
+          NOT_GOOD: {
+            target:'otherChannel' , actions:'logchoice'
+            
+       }
+         
         }
       },
 
@@ -142,14 +155,14 @@ states: {
       },
       isWifi: {
         on: {
-          WIRED: '#stt.speedTest',
+          WIRED: 'speedTest',
           WIFI: 'wifiStrength',
           DISCONNECTED: 'deviceWifiConfiguration'
         }
       },
       wifiStrength: {
         on: {
-          GOOD: '#stt.speedTest',
+          GOOD: 'speedTest',
           NOT_GOOD: 'wifiOptimization'
         }
       },
@@ -189,14 +202,8 @@ states: {
    ,
       RESET: 'main.welcome'
     }
-  },
-  speedTest: {
-      on: {
-        GOOD: '#stt.main.end',
-        NOT_GOOD: '#stt.main.otherChannel',
-        BACK: 'main.hist'
-      }
-    }
+  }
+  
 }
 },
 {
