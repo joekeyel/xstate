@@ -155,25 +155,53 @@ states: {
       },
       isWifi: {
         on: {
-          WIRED: 'speedTest',
-          WIFI: 'wifiStrength',
-          DISCONNECTED: 'deviceWifiConfiguration'
+          WIRED: {
+            target:'speedTest' , actions:'logchoice'
+            
+           },
+          WIFI: {
+            target:'wifiStrength' , actions:'logchoice'
+            
+           },
+          DISCONNECTED: {
+            target:'deviceWifiConfiguration' , actions:'logchoice'
+            
+           }
         }
       },
       wifiStrength: {
         on: {
-          GOOD: 'speedTest',
-          NOT_GOOD: 'wifiOptimization'
+          GOOD: {
+            target:'speedTest' , actions:'logchoice'
+            
+           },
+          NOT_GOOD: {
+            target:'wifiOptimization' , actions:'logchoice'
+            
+           }
         }
       },
       
       deviceWifiConfiguration: {
-        on: { CONNECTED: 'wifiStrength', NOT_CONNECTED: 'otherChannel' }
+        on: { CONNECTED: {
+          target:'wifiStrength' , actions:'logchoice'
+          
+         }, NOT_CONNECTED: {
+          target:'otherChannel' , actions:'logchoice'
+          
+         } 
+        }
       },
       wifiOptimization: {
         on: {
-          DONE: 'end',
-          NOT_DONE: 'otherChannel'
+          DONE: {
+            target:'end' , actions:'logchoice'
+            
+           } ,
+          NOT_DONE: {
+            target:'otherChannel' , actions:'logchoice'
+            
+           } 
         }
       },
       otherChannel: {},
@@ -217,6 +245,7 @@ actions:{
     
      if(context.step>1){
         context.step = context.step - 1
+        context.log.pop()
      }
       
     }
