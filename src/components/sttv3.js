@@ -171,7 +171,7 @@ const noInternet = {
     id: 'trySolution',
     on: {
      
-       DONE: '#isItOkNow'
+       DONE: {target: '#isItOkNow',actions:'logChoice'}
           },
     states: {
       reboot: {
