@@ -18,7 +18,7 @@ const noInternet = {
       },
       btuLed: {
         on: {
-          UPDATE_BTU_LED_LIGHTS: { actions: ['updateLed','logChoice'] },
+          UPDATE_BTU_LED_LIGHTS: { actions: ['updateLed'] },
           DIAGNOSE_LED: {target:'btuDiagnosis',actions:'logChoice'}
         }
       },
@@ -36,7 +36,7 @@ const noInternet = {
       },
       sbvmLed: {
         on: {
-          UPDATE_SBVM_LED_LIGHTS: { actions: ['updateLed','logChoice'] },
+          UPDATE_SBVM_LED_LIGHTS: { actions: ['updateLed'] },
           DIAGNOSE_LED: {target:'sbvmDiagnosis',actions:'logChoice'}
         }
       },
@@ -257,9 +257,8 @@ const noInternet = {
     },
     backButton: () => {
    
-      if (mainMachine.context.step > 1) {
-        mainMachine.context.step = mainMachine.context.step - 1
-        console.log(mainMachine.context.step)
+      if (mainMachine.context.log.length > 1) {
+       
         mainMachine.context.log.pop()
   
       }
@@ -352,8 +351,8 @@ const noInternet = {
            
             var textreturn = "#main.start.intro"
             
-            if(mainMachine.context.step>1){
-            var state = JSON.stringify(mainMachine.context.log[mainMachine.context.step - 1].state)
+            if(mainMachine.context.log.length>1){
+            var state = JSON.stringify(mainMachine.context.log[mainMachine.context.log.length - 2].state)
              var statechild = state.replace("{\"","") 
              var statechild2 = statechild.replace("\"}","") 
              var statechild3 = statechild2.replace("\":\"",".") 
@@ -364,8 +363,6 @@ const noInternet = {
              
              textreturn = statechild7
              
-            } else{
-              textreturn = "#main.start.intro"
             } 
             
             return textreturn
