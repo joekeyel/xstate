@@ -349,9 +349,10 @@ const noInternet = {
             console.log(mainMachine.context.step)
             
            
-            var textreturn = "#main.start.intro"
+            var textreturn = "start.welcome"
             
             if(mainMachine.context.log.length>1){
+
             var state = JSON.stringify(mainMachine.context.log[mainMachine.context.log.length - 2].state)
              var statechild = state.replace("{\"","") 
              var statechild2 = statechild.replace("\"}","") 
@@ -364,6 +365,8 @@ const noInternet = {
              textreturn = statechild7
              
             } 
+
+            console.log(textreturn)
             
             return textreturn
           },
