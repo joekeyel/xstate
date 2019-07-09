@@ -352,10 +352,7 @@ const noInternet = {
             var textreturn = "start.welcome"
             
             if(mainMachine.context.log.length>1){
-<<<<<<< HEAD
 
-=======
->>>>>>> 9d58814c5530cb390082432fe4faba946c9a79a0
             var state = JSON.stringify(mainMachine.context.log[mainMachine.context.log.length - 2].state)
              var statechild = state.replace("{\"","") 
              var statechild2 = statechild.replace("\"}","") 
