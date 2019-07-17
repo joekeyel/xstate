@@ -249,11 +249,10 @@ const noInternet = {
     }
   }
   
-  const actionsList = {
+  const actionslist = {
     logChoice: (context,event, actionMeta) => {
       mainMachine.context.log.push({ state: actionMeta.state.value, choice: event.type })
      
-      mainMachine.context.step = mainMachine.context.step + 1
     },
     backButton: () => {
    
@@ -345,10 +344,9 @@ const noInternet = {
         BACK: {
           get target() {
   
-            
             console.log(mainMachine.context.step)
+            console.log(mainMachine.context.log)
             
-           
             var textreturn = "start.welcome"
             
             if(mainMachine.context.log.length>1){
@@ -366,7 +364,7 @@ const noInternet = {
              
             } 
 
-            console.log(textreturn)
+           
             
             return textreturn
           },
@@ -386,7 +384,7 @@ const noInternet = {
       }
     },
     {
-      actions :actionsList,
+      actions :actionslist,
       guards
     }
   )

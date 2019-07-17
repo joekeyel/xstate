@@ -217,11 +217,11 @@ states: {
     on: {
        BACK:{
          get target(){
+
+          var textreturn = "main.welcome"
            
           if(sttMachine.context.step>1){
              textreturn = 'main.'+sttMachine.context.log[sttMachine.context.step-1].state
-          }else{
-            textreturn = "main.welcome"
           }
           
           return textreturn
