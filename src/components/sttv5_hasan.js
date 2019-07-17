@@ -481,8 +481,10 @@ const noInternet = {
     updateCpeModel: XState.assign((context, event) => {
       const { type: cpeType } = (cpeDetails || {})[event.type] || {}
       const ledsOptionsArray = Object.entries(((cpeDetails || {})[event.type] || {}).leds || {}) || []
+      
       let ledsDefault = {}
       let ledsOptions = {}
+    
       ledsOptionsArray.forEach(led => {
         ledsDefault[led[0]] = led[1].options[0]
         ledsOptions[led[0]] = led[1].options
