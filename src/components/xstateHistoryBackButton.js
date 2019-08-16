@@ -306,7 +306,7 @@ const cpeDetails = {
 const diagnoseBTUProblem = {
     id: 'diagnoseBTUProblem',
     on:{
-        BACK:'#history'
+        BACK:'#historyLED'
     },
     initial:'power_socket',
     states: {
@@ -320,7 +320,8 @@ const diagnoseBTUProblem = {
                 question: 'Seems like you might be  having a power socket issue. Try to unplug your equipment and use another power socket.',
                 notes:"Click the copy button, and paste this summary during your chat with our live chat agent",
                 choices: {
-                    gotIt: { text: 'Got it', event: 'GOT_IT' }
+                    gotIt: { text: 'Got it', event: 'GOT_IT' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
             }
 
@@ -331,6 +332,7 @@ const diagnoseBTUProblem = {
             on: {
                 PROCESS_TO_LIVE_CHAT: { target:'#summaryLiveChat',actions:'logChoice'},
                 NO_THANKS_YOU: { target:'#refuseLiveChat',actions:'logChoice'},
+                back: { text:'Back' , event : 'BACK' }
             },
             meta: {
                 question: 'Seems like you have an issues with your fiber cable. Fret not, you may proceed to our Live Chat for further assistance.',
@@ -338,7 +340,8 @@ const diagnoseBTUProblem = {
                 summary : true,
                 choices: {
                     proceedToLiveChat: { text: 'Proceed to Live Chat', event: 'PROCESS_TO_LIVE_CHAT' },
-                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' }
+                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
             }
         },
@@ -355,7 +358,8 @@ const diagnoseBTUProblem = {
                 summary : true,
                 choices: {
                     proceedToLiveChat: { text: 'Proceed to Live Chat', event: 'PROCESS_TO_LIVE_CHAT' },
-                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' }
+                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
             }
         },
@@ -372,7 +376,8 @@ const diagnoseBTUProblem = {
                 summary : true,
                 choices: {
                     proceedToLiveChat: { text: 'Proceed to Live Chat', event: 'PROCESS_TO_LIVE_CHAT' },
-                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' }
+                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
             }
         },
@@ -389,7 +394,8 @@ const diagnoseBTUProblem = {
                 summary : true,
                 choices: {
                     proceedToLiveChat: { text: 'Proceed to Live Chat', event: 'PROCESS_TO_LIVE_CHAT' },
-                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' }
+                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
             }
         },
@@ -403,7 +409,8 @@ const diagnoseBTUProblem = {
                 question: 'Seems like you might be having a cable  issue. Try replacing your RJ45 cable which is connected to the Internet/WAN port.',
                 notes:"Click the copy button, and paste this summary during your chat with our live chat agent",
                 choices: {
-                    gotIt: { text: 'Got it', event: 'GOT_IT' }  
+                    gotIt: { text: 'Got it', event: 'GOT_IT' },
+                    back: { text:'Back' , event : 'BACK' }  
                 }
             }
         },
@@ -417,7 +424,8 @@ const diagnoseBTUProblem = {
                  question: 'Seems like you might be having a cable  issue. Try replacing your RJ11 cable which is connected to the DSL port.',
                  notes:"Click the copy button, and paste this summary during your chat with our live chat agent",
                  choices: {
-                    gotIt: { text: 'Got it', event: 'GOT_IT' }  
+                    gotIt: { text: 'Got it', event: 'GOT_IT' },
+                    back: { text:'Back' , event : 'BACK' }  
                  }
              }
         },
@@ -431,7 +439,8 @@ const diagnoseBTUProblem = {
                  question: 'Seems like you might need to reconfigure your Wi-Fi.',
                  notes:"Click the copy button, and paste this summary during your chat with our live chat agent",
                  choices: {
-                    gotIt: { text: 'Got it', event: 'GOT_IT' }  
+                    gotIt: { text: 'Got it', event: 'GOT_IT' },
+                    back: { text:'Back' , event : 'BACK' }  
                  }
              }
         },
@@ -448,7 +457,8 @@ const diagnoseBTUProblem = {
                 summary : true,
                 choices: {
                     proceedToLiveChat: { text: 'Proceed to Live Chat', event: 'PROCESS_TO_LIVE_CHAT' },
-                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' }
+                    noThankYou: { text: 'No, thank you', event: 'NO_THANKS_YOU' },
+                    back: { text:'Back' , event : 'BACK' }
                 }
              }
         },
@@ -586,6 +596,7 @@ const verifyProblem = {
             id: 'verifyProblem',
             on: {
                 INTERNET_CONNECT: {target:'#internetService',actions:'logChoice'},
+                BACK:'#welcomePage'
                // UNIFI_TV:{ target:'#verifyProblem',actions:'logChoice'},
               //  VOICE:{ target:'#symptomDEL',actions:'logChoice'}
             },
@@ -608,7 +619,8 @@ const internetService = {
             id: 'internetService',
             on: {
                 UNIFI: {target:'#verifySymptom',actions:'logChoice'},
-                STREAMYX:{ target:'#verifySymptom',actions:'logChoice'}
+                STREAMYX:{ target:'#verifySymptom',actions:'logChoice'},
+                BACK:'#verifyProblem'
             },
             onExit: ['updateService'],
             meta: {
@@ -632,7 +644,8 @@ const verifySymptom = {
             on: {
                 NO_INTERNET: {target:'checkService'},
                 SLOW_CONNECTION:{target:'checkService'},
-                WIFI_PROBLEM:{target:'checkService'}
+                WIFI_PROBLEM:{target:'checkService'},
+                BACK:'#internetService'
             },
             meta: {
                 question: 'What issue are you experiencing with your service?',
@@ -644,7 +657,7 @@ const verifySymptom = {
             }
         },
         checkService:{
-            
+            id:'checkService',
             on: {
                 '': [ 
                         {target: '#checkCableUnifi', cond: 'checkUnifiCondition', actions:'logChoice'  },
@@ -661,7 +674,8 @@ const checkCableUnifi = {
         checkCableUnifi: {
             id:'checkCableUnifi',
             on: {
-                OK: {target:'#rebootUnifi',actions:'logChoice'}
+                OK: {target:'#rebootUnifi',actions:'logChoice'},
+                BACK: {target:'#verifySymptom'}
             },
             meta: {
                 question: 'Typical setups for your home equipments are shown below. You can select the diagram for further details and counter check with your  home setup, to check your physical connection.',
@@ -681,7 +695,8 @@ const rebootUnifi ={
         rebootUnifi: {
             id:'rebootUnifi',
             on: {
-                PROCEED: {target:'#verifyUnifiStatus',actions:'logChoice'}
+                PROCEED: {target:'#verifyUnifiStatus',actions:'logChoice'},
+                BACK:{target:'#checkCableUnifi'}
             },
             meta: {
                 question: 'For this troubleshooting exercise, let’s reboot all your equipments.',
@@ -749,7 +764,8 @@ const verifyUnifiStatus = {
             id: 'verifyUnifiStatus',
             on: {
                 NO: {target:'#thankYou',actions:'logChoice'},
-                YES: {target:'#selectBTU',actions:'logChoice'}
+                YES: {target:'#selectBTU',actions:'logChoice'},
+                BACK: {target:'#rebootUnifi'}
             },
             meta: {
                 question: 'Are you still having problems with your service after checking your physical connections? ',
@@ -782,6 +798,9 @@ const verifySTXStatus =  {
     }
 }
 
+
+
+
 const diagnoseBTUOK = {
     initial: 'diagnoseBTUOK',
     states: {
@@ -789,13 +808,15 @@ const diagnoseBTUOK = {
             id: 'diagnoseBTUOK',
             on: {
                 CONTINUE_TROUBLESHOOT: {target:'#rg',actions:'logChoice'},
-                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'}
+                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'},
+                BACK : {target:'#matchLedBTU'}
             },
             meta: {
                 question: 'Seems like you don’t have any issues with your device (BTU). Has your issue been resolved, or would you like to continue with the next troubleshooting?',
                 choices: {
                     continueTroubleshooting: { text: 'Continue Troubleshooting', event: 'CONTINUE_TROUBLESHOOT' },
                     myIssueIsResolved: { text: 'My issue is resolved', event: 'MY_ISSUE_IS_RESOLVED' },
+                    back : { text: 'Back' , event : 'BACK' }
                 }
             }
         }
@@ -809,13 +830,15 @@ const diagnoseSBVMOK = {
             id: 'diagnoseSBVMOK',
             on: {
                 CONTINUE_TROUBLESHOOT: {target:'#connectionType',actions:'logChoice'},
-                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'}
+                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'},
+                BACK : {target:'#historyLED'}
             },
             meta: {
                 question: 'Seems like you don’t have any issues with your device (BTU). Has your issue been resolved, or would you like to continue with the next troubleshooting?',
                 choices: {
                     continueTroubleshooting: { text: 'Continue Troubleshooting', event: 'CONTINUE_TROUBLESHOOT' },
                     myIssueIsResolved: { text: 'My issue is resolved', event: 'MY_ISSUE_IS_RESOLVED' },
+                    back : { text: 'Back' , event : 'BACK' }
                 }
             }
         }
@@ -830,17 +853,36 @@ const diagnoseRGOK = {
             id: 'diagnoseRGOK',
             on: {
                 CONTINUE_TROUBLESHOOT: {target:'#connectionType',actions:'logChoice'},
-                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'}
+                MY_ISSUE_IS_RESOLVED: {target:'#thankYou',actions:'logChoice'},
+                BACK : {target:'#historyLED'}
             },
             meta: {
                 question: 'Seems like you don’t have any issues with your Residential Gateway (RG). Has your issue been resolved or would you like to continue with the next troubleshooting?',
                 choices: {
                     continueTroubleshooting: { text: 'Continue Troubleshooting', event: 'CONTINUE_TROUBLESHOOT' },
                     myIssueIsResolved: { text: 'My issue is resolved', event: 'MY_ISSUE_IS_RESOLVED' },
+                    back : { text: 'Back' , event : 'BACK' }
                 }
             }
         }
     }
+}
+
+
+const diagnosCPEOK = {
+    id: 'diagnosCPEOK',
+    initial : 'diagnoseRGOK',
+    states:{
+        
+        diagnoseSBVMOK,
+        diagnoseRGOK,
+        history:{
+            id: 'historyCPEOK',
+            type : 'history'
+        }
+
+    }
+
 }
 
 const symptomDEL = {
@@ -954,13 +996,15 @@ const connectionType = {
             on: {
                 WIRED: { target:'checkService',actions:'logChoice'},
                 WIRELESS: { target:'#checkWifi',actions:'logChoice'},
+                BACK:'#historyCPEOK'
             },
             meta: {
                 question: 'Which of the below connection type would you want to troubleshoot?',
                 notes:'Ensure that your device is connected to unifi/streamyx',
                 choices: {
                     wired: { text: 'Wired (Laptop, desktop)', event: 'WIRED' },
-                    Wireless: { text: 'Wireless (Smartphone, tablet, laptop)', event: 'WIRELESS' },
+                    Wireless: { text: 'Wireless (Smartphone, tablet, laptop)', event: 'WIRELESS' }
+                   
                 }
             }
         },
@@ -988,6 +1032,7 @@ const selectSpeedUnifi = {
                 50: { target:'#speedTest',actions:'logChoice'},
                 30: { target:'#speedTest',actions:'logChoice'},
                 10: { target:'#speedTest',actions:'logChoice'},
+                BACK:'#connectionType'
                 
             },
             meta: {
@@ -1000,7 +1045,8 @@ const selectSpeedUnifi = {
                     100: { text: '100Mbps', event: '100' },
                     50: { text: '50Mbps', event: '50' },
                     30: { text: '30Mbps', event: '30' },
-                    10: { text: '10Mbps', event: '10' },
+                    10: { text: '10Mbps', event: '10' }
+                   
                 }
             }
         }
@@ -1017,7 +1063,8 @@ const selectSpeedStreamyx = {
                 8: { target:'#speedTest',actions:'logChoice'},
                 5: { target:'#speedTest',actions:'logChoice'},
                 3: { target:'#speedTest',actions:'logChoice'},
-                1: { target:'#speedTest',actions:'logChoice'}
+                1: { target:'#speedTest',actions:'logChoice'},
+                BACK:'#connectionType'
             },
             meta: {
                 question: 'What’s the package speed that you have subscribed to?',
@@ -1026,9 +1073,24 @@ const selectSpeedStreamyx = {
                     8: { text: '8Mbps', event: '8' },
                     5: { text: '5Mbps', event: '5' },
                     3: { text: '3Mbps', event: '3' },
-                    1: { text: '1Mbps', event: '1' }
+                    1: { text: '1Mbps', event: '1' },
+                    BACK: { text:'Back',event:'BACK'}
                 }
             }
+        }
+    }
+}
+
+
+const selectSpeed = {
+    id:'selectSpeed',
+    initial:'selectSpeedUnifi',
+    states:{
+        selectSpeedUnifi,
+        selectSpeedStreamyx,
+        history:{
+            id: 'historySelectSpeed',
+            type: 'history'
         }
     }
 }
@@ -1256,6 +1318,7 @@ const selectCPE = {
                 NETIS_DL4480V: {target:'#matchLedBTU',actions:'logChoice'},
                 NETIS_DL4480V1: {target:'#matchLedBTU',actions:'logChoice'},
                 TPLINK_ARCHER_VR1200V:{target:'#matchLedBTU',actions:'logChoice'},
+                BACK:'#verifyUnifiStatus'
             },
             onExit: 'updateCpeModel',
             meta: {
@@ -1268,8 +1331,8 @@ const selectCPE = {
                     ZTE_ZXHN_H267A: { text: 'ZTE ZXHN H267A', event: 'ZTE_ZXHN_H267A' },
                     NETIS_DL4480V: { text: 'Netis DL4480V', event: 'NETIS_DL4480V' },
                     NETIS_DL4480V1: { text: 'Netis DL4480-V1', event: 'NETIS_DL4480V1' },
-                    TPLINK_ARCHER_VR1200V: { text: 'TPLink Archer VR1200v', event: 'TPLINK_ARCHER_VR1200V' }
-                   
+                    TPLINK_ARCHER_VR1200V: { text: 'TPLink Archer VR1200v', event: 'TPLINK_ARCHER_VR1200V' },
+                    BACK:{ text:'Back' , event:'BACK'}
                 }
             }
         },
@@ -1280,7 +1343,8 @@ const selectCPE = {
                 NETIS_DL4480V: {target:'#matchLedBTU',actions:'logChoice'},
                 NETIS_DL4480V1: {target:'#matchLedBTU',actions:'logChoice'},
                 TPLINK_ARCHER_VR1200V:{target:'#matchLedBTU',actions:'logChoice'},
-                ADSL:{target:'#matchLedBTU',actions:'logChoice'}
+                ADSL:{target:'#matchLedBTU',actions:'logChoice'},
+                BACK:'#verifySTXStatus'
             },
             onExit: 'updateCpeModel',
             meta: {
@@ -1292,6 +1356,7 @@ const selectCPE = {
                     NETIS_DL4480V1: { text: 'Netis DL4480-V1', event: 'NETIS_DL4480V1' },
                     TPLINK_ARCHER_VR1200V: { text: 'TPLink Archer VR1200v', event: 'TPLINK_ARCHER_VR1200V' },
                     ADSL: { text: 'TPLink Archer VR1200v', event: 'TPLINK_ARCHER_VR1200V' },
+                    BACK: { text:'Back', event:'BACK'}
                 }
             }
         },
@@ -1302,7 +1367,8 @@ const selectCPE = {
               INNACOM_RGX4400: {target:'#rgLed',actions:'logChoice'},
               TPLINK_ARCHER_C1200: {target:'#rgLed',actions:'logChoice'},
               TPLINK_ARCHER_C5: {target:'#rgLed',actions:'logChoice'},
-              DLINK_DIR_842: {target:'#rgLed',actions:'logChoice'}
+              DLINK_DIR_842: {target:'#rgLed',actions:'logChoice'},
+              BACK:'#diagnoseBTUOK'
             },
             onExit: 'updateCpeModel',
             meta: {
@@ -1314,6 +1380,7 @@ const selectCPE = {
                     TPLINK_ARCHER_C1200: { text: 'TPLINK Archer C1200', event: 'TPLINK_ARCHER_C1200' },
                     TPLINK_ARCHER_C5: { text: 'TPLINK ARCHER C5', event: 'TPLINK_ARCHER_C5' },
                     DLINK_DIR_842: { text: 'DLINK DIR 842', event: 'DLINK_DIR_842' },
+                    BACK: { text:'Back' , event:'BACK'}
                 }
             }
           },
@@ -1334,7 +1401,7 @@ const selectLED = {
             on: {
                 UPDATE_BTU_LED_LIGHTS: { actions: ['updateLed'] },
                 DIAGNOSE_LED: {target:'#btuDiagnosis',actions:'logChoice'},
-                BACK:'#cpeHistory'
+                BACK:'#selectBTU'
             },
             meta: {
                 question: 'Tap on the LED lights on the diagram below to match the LED lights on your device (BTU/SBVM). Then let\'s start to diagnose.',
@@ -1342,7 +1409,8 @@ const selectLED = {
                 internalEvent:'UPDATE_BTU_LED_LIGHTS',
                 notes:"You can tap multiple times to change the LED colour in the diagram.",
                 choices: {
-                    diagnoseLed: { text: 'Diagnose', event: 'DIAGNOSE_LED' }
+                    diagnoseLed: { text: 'Diagnose', event: 'DIAGNOSE_LED' },
+                    back:{text:'Back',event:'BACK'}
                 }
             }
         },
@@ -1358,13 +1426,14 @@ const selectLED = {
                 internal: true,
                 internalEvent: 'UPDATE_RG_LED_LIGHTS',
                 choices: {
-                  diagnoseLed: { text: 'Diagnose', event: 'DIAGNOSE_LED' }
+                  diagnoseLed: { text: 'Diagnose', event: 'DIAGNOSE_LED' },
+                  back:{text:'Back',event:'BACK'}
                 }
             }
 
           },
         history:{
-            id:'history',
+            id:'historyLED',
             type:'history'
         }
     }
@@ -1479,12 +1548,25 @@ const actionsList = {
         window.open("https://unifi.com.my/chat/index.html");
     },
     logChoice: (context, event, actionMeta) => {
-        console.log(actionMeta.state.history.value)
+        console.log(actionMeta)
+
         let choices = Object.values(actionMeta.state.history.meta)[0].choices;
         let choicesArrays= Object.values(choices);
         let type = event.type;
         let choicesText ='';
         choicesArrays.forEach(val => {if(val.event ===  type ){choicesText = val.text;}});
+
+
+        // to update the previouse question to meta
+        const previousQuestion ={
+            question:Object.values(actionMeta.state.history.meta)[0].question,
+            selectedAnswer:choicesText
+        }
+        Object.assign(Object.values(actionMeta.state.meta)[0],{previousQuestion: previousQuestion});
+
+
+
+
         let question = getQuestion(context, event, actionMeta);
         mainMachine.context.log.push({ state: actionMeta.state.value, choice: event.type,question: question,choicetext: choicesText})
     },
@@ -1779,11 +1861,11 @@ const mainMachine = Machine(
         rg: { model: '', leds: {}, ledsOptions: {} }
       },
       on: {
-        RESET: { target: '', actions: 'resetContext' },
-        BACK: {
-           target:'#cpeHistory',
-            actions: 'backButton'
-          }
+        RESET: { target: '', actions: 'resetContext' }
+        // BACK: {
+        //    target:'#cpeHistory',
+        //     actions: 'backButton'
+        //   }
       },
       states: 
             {
@@ -1805,12 +1887,10 @@ const mainMachine = Machine(
                 selectBTU,
                 diagnoseBTUProblem,
                 verifyIssues,
-                diagnoseRGOK,
                 diagnoseBTUOK,
-                diagnoseSBVMOK,
+                diagnosCPEOK,
                 connectionType,
-                selectSpeedUnifi,
-                selectSpeedStreamyx,
+                selectSpeed,
                 speedTest,
                 improveSpeed,
                 speedVerifyProblem,
@@ -1824,8 +1904,7 @@ const mainMachine = Machine(
                 thankYou,
                 proceedLiveChat,
                 refuseLiveChat,
-                summaryLiveChat,
-                history
+                summaryLiveChat
             }
     },
     {
