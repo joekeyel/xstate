@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-10T00:33:43.088Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="FlDfFDbo8LsDFsGrU8sX" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-10T01:03:33.814Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="dPWNHo6jDlwc1WdTJjcm" version="15.7.0" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="2062" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -58,13 +58,13 @@
         <mxCell id="7baba1c4bc27f4b0-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="7baba1c4bc27f4b0-8" vertex="1">
           <mxGeometry x="45" y="85" width="10" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="_iOlRguKoxTa1Bor_IQQ-22" value="Request:&lt;br&gt;1.Service order" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="7baba1c4bc27f4b0-8">
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-22" value="Request:&lt;br&gt;1.Combo Card Details" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="7baba1c4bc27f4b0-8">
           <mxGeometry x="-70" y="200" width="110" height="55" as="geometry" />
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-23" value="Request:&lt;br&gt;1.Service order" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="7baba1c4bc27f4b0-8">
           <mxGeometry x="-70" y="277.5" width="110" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="_iOlRguKoxTa1Bor_IQQ-25" value="Request:&lt;br&gt;1.Service order" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="7baba1c4bc27f4b0-8">
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-25" value="Request:&lt;br&gt;1.A32 Card Details" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="7baba1c4bc27f4b0-8">
           <mxGeometry x="-70" y="360" width="110" height="55" as="geometry" />
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7baba1c4bc27f4b0-9" target="7baba1c4bc27f4b0-10">
@@ -118,6 +118,42 @@
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-27" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
           <mxGeometry x="580" y="520" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-28" value="Response&lt;br&gt;1.Status&lt;br&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="830" y="425" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-29" value="Response&lt;br&gt;1.Status&lt;br&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="830" y="260" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-30" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="7baba1c4bc27f4b0-2" target="7baba1c4bc27f4b0-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="430" as="sourcePoint" />
+            <mxPoint x="570" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="400" />
+              <mxPoint x="470" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-31" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="260" as="sourcePoint" />
+            <mxPoint x="300" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490.5" y="260" />
+              <mxPoint x="460.5" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-32" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="585" as="sourcePoint" />
+            <mxPoint x="310" y="585" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500.5" y="585" />
+              <mxPoint x="470.5" y="585" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
