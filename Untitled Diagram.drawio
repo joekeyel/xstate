@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-11-09T09:46:55.408Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="0KMXPVNsUTK81jX7AX9M" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-10T00:33:43.088Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="FlDfFDbo8LsDFsGrU8sX" version="15.7.0" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="2062" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="7baba1c4bc27f4b0-2" value="NIG" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="360" y="80" width="100" height="580" as="geometry" />
+          <mxGeometry x="510" y="80" width="100" height="580" as="geometry" />
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-10" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="7baba1c4bc27f4b0-2" vertex="1">
           <mxGeometry x="45" y="100" width="10" height="430" as="geometry" />
@@ -53,7 +53,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-8" value="SPORA" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="100" y="80" width="120" height="580" as="geometry" />
+          <mxGeometry x="250" y="80" width="120" height="580" as="geometry" />
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="7baba1c4bc27f4b0-8" vertex="1">
           <mxGeometry x="45" y="85" width="10" height="440" as="geometry" />
@@ -69,11 +69,11 @@
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7baba1c4bc27f4b0-9" target="7baba1c4bc27f4b0-10">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="170" y="300" as="sourcePoint" />
-            <mxPoint x="180" y="250" as="targetPoint" />
+            <mxPoint x="320" y="300" as="sourcePoint" />
+            <mxPoint x="330" y="250" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="250" y="240" />
-              <mxPoint x="370" y="240" />
+              <mxPoint x="400" y="240" />
+              <mxPoint x="520" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -82,29 +82,26 @@
             <mxPoint x="-12" y="-7" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7baba1c4bc27f4b0-41" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
-          <mxGeometry x="430" y="180" width="130" height="90" as="geometry" />
+        <mxCell id="7baba1c4bc27f4b0-41" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO&lt;br&gt;4.New Combo Card&lt;br&gt;5.Old A32 Card" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="580" y="180" width="130" height="90" as="geometry" />
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-40" value="Request:&lt;br&gt;1.Service number&lt;br&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
-          <mxGeometry x="30" y="190" width="110" height="55" as="geometry" />
+          <mxGeometry x="180" y="190" width="110" height="55" as="geometry" />
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-13" value="OSM/ASAP" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
-          <mxGeometry x="610" y="80" width="100" height="580" as="geometry" />
+          <mxGeometry x="760" y="80" width="100" height="580" as="geometry" />
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-14" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="_iOlRguKoxTa1Bor_IQQ-13">
           <mxGeometry x="45" y="100" width="10" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="_iOlRguKoxTa1Bor_IQQ-15" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="680" y="180" width="130" height="90" as="geometry" />
-        </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="155" y="560" as="sourcePoint" />
-            <mxPoint x="405" y="560" as="targetPoint" />
+            <mxPoint x="305" y="560" as="sourcePoint" />
+            <mxPoint x="555" y="560" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="250" y="560" />
-              <mxPoint x="315" y="560" />
-              <mxPoint x="370" y="560" />
+              <mxPoint x="400" y="560" />
+              <mxPoint x="465" y="560" />
+              <mxPoint x="520" y="560" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -114,7 +111,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_iOlRguKoxTa1Bor_IQQ-24" value="Request:&lt;br&gt;1.Service Order" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="30" y="530" width="110" height="55" as="geometry" />
+          <mxGeometry x="180" y="530" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-26" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO&lt;br&gt;4.New Combo Card Details&lt;br&gt;5.Old A32 Card" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="570" y="335" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_iOlRguKoxTa1Bor_IQQ-27" value="Response&lt;br&gt;1.Status&lt;br&gt;2.Reservation ID&lt;br&gt;3.ServiceNO" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="580" y="520" width="130" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
